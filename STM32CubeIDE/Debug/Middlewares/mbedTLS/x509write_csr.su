@@ -1,0 +1,11 @@
+x509write_csr.c:47:6:mbedtls_x509write_csr_init	16	static
+x509write_csr.c:52:6:mbedtls_x509write_csr_free	16	static
+x509write_csr.c:60:6:mbedtls_x509write_csr_set_md_alg	16	static
+x509write_csr.c:65:6:mbedtls_x509write_csr_set_key	16	static
+x509write_csr.c:70:5:mbedtls_x509write_csr_set_subject_name	16	static
+x509write_csr.c:76:5:mbedtls_x509write_csr_set_extension	32	static
+x509write_csr.c:84:15:csr_get_unused_bits_for_named_bitstring	24	static
+x509write_csr.c:97:5:mbedtls_x509write_csr_set_key_usage	40	static
+x509write_csr.c:123:5:mbedtls_x509write_csr_set_ns_cert_type	40	static
+x509write_csr.c:153:5:mbedtls_x509write_csr_der	3224	static
+x509write_csr.c:265:5:mbedtls_x509write_csr_pem	4152	static

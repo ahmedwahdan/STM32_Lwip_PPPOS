@@ -1,0 +1,10 @@
+blowfish.c:83:17:F	32	static
+blowfish.c:102:13:blowfish_enc	40	static
+blowfish.c:131:13:blowfish_dec	40	static
+blowfish.c:160:6:mbedtls_blowfish_init	16	static
+blowfish.c:166:6:mbedtls_blowfish_free	16	static
+blowfish.c:177:5:mbedtls_blowfish_setkey	48	static
+blowfish.c:239:5:mbedtls_blowfish_crypt_ecb	32	static
+blowfish.c:273:5:mbedtls_blowfish_crypt_cbc	40	static
+blowfish.c:333:5:mbedtls_blowfish_crypt_cfb64	32	static
+blowfish.c:393:5:mbedtls_blowfish_crypt_ctr	40	static

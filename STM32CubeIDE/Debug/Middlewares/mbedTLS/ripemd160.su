@@ -1,0 +1,14 @@
+ripemd160.c:75:6:mbedtls_ripemd160_init	16	static
+ripemd160.c:80:6:mbedtls_ripemd160_free	16	static
+ripemd160.c:88:6:mbedtls_ripemd160_clone	16	static
+ripemd160.c:97:5:mbedtls_ripemd160_starts_ret	16	static
+ripemd160.c:112:6:mbedtls_ripemd160_starts	16	static
+ripemd160.c:122:5:mbedtls_internal_ripemd160_process	120	static
+ripemd160.c:310:6:mbedtls_ripemd160_process	16	static
+ripemd160.c:321:5:mbedtls_ripemd160_update_ret	40	static
+ripemd160.c:371:6:mbedtls_ripemd160_update	24	static
+ripemd160.c:390:5:mbedtls_ripemd160_finish_ret	48	static
+ripemd160.c:426:6:mbedtls_ripemd160_finish	16	static
+ripemd160.c:438:5:mbedtls_ripemd160_ret	120	static
+ripemd160.c:463:6:mbedtls_ripemd160	24	static
+ripemd160.c:518:5:mbedtls_ripemd160_self_test	48	static

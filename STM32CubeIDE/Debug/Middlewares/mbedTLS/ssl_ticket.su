@@ -1,0 +1,11 @@
+cipher.h:526:19:mbedtls_cipher_get_key_bitlen	16	static
+ssl_ticket.c:46:6:mbedtls_ssl_ticket_init	16	static
+ssl_ticket.c:60:12:ssl_ticket_gen_key	64	static
+ssl_ticket.c:90:12:ssl_ticket_update_keys	32	static
+ssl_ticket.c:118:5:mbedtls_ssl_ticket_setup	32	static
+ssl_ticket.c:165:12:ssl_save_session	40	static
+ssl_ticket.c:209:12:ssl_load_session	40	static
+ssl_ticket.c:281:5:mbedtls_ssl_ticket_write	96	static
+ssl_ticket.c:363:32:ssl_ticket_select_key	24	static
+ssl_ticket.c:379:5:mbedtls_ssl_ticket_parse	120	static
+ssl_ticket.c:473:6:mbedtls_ssl_ticket_free	16	static
