@@ -1,8 +1,0 @@
-ssl_internal.h:742:19:mbedtls_ssl_safer_memcmp	40	static
-ssl_cookie.c:74:6:mbedtls_ssl_cookie_init	16	static
-ssl_cookie.c:87:6:mbedtls_ssl_cookie_set_timeout	16	static
-ssl_cookie.c:92:6:mbedtls_ssl_cookie_free	16	static
-ssl_cookie.c:103:5:mbedtls_ssl_cookie_setup	72	static
-ssl_cookie.c:129:12:ssl_cookie_hmac	56	static
-ssl_cookie.c:156:5:mbedtls_ssl_cookie_write	56	static
-ssl_cookie.c:202:5:mbedtls_ssl_cookie_check	88	static

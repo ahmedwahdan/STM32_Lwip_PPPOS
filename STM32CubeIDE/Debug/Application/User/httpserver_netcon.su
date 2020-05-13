@@ -1,3 +1,0 @@
-httpserver_netcon.c:54:6:http_server_serve	32	static
-httpserver_netcon.c:113:13:http_server_netconn_thread	24	static
-httpserver_netcon.c:153:6:http_server_netconn_init	16	static

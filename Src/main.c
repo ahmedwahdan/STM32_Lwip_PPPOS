@@ -84,9 +84,6 @@ UART_HandleTypeDef huart6;
 SDRAM_HandleTypeDef hsdram1;
 
 osThreadId defaultTaskHandle;
-osThreadId TCP_IPHandle;
-uint32_t TCP_IPBuffer[ 1000 ];
-osStaticThreadDef_t TCP_IPControlBlock;
 osSemaphoreId TCP_IP_SemHandle;
 osStaticSemaphoreDef_t TCP_IP_SemControlBlock;
 /* USER CODE BEGIN PV */
@@ -119,7 +116,6 @@ static void MX_TIM12_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_USART6_UART_Init(void);
 void StartDefaultTask(void const * argument);
-void tcpip_thread(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -211,10 +207,6 @@ int main(void)
   /* definition and creation of defaultTask */
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 4096);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
-
-  /* definition and creation of TCP_IP */
- // osThreadStaticDef(TCP_IP, tcpip_thread, osPriorityHigh, 0, 1000, TCP_IPBuffer, &TCP_IPControlBlock);
-  //TCP_IPHandle = osThreadCreate(osThread(TCP_IP), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -1578,24 +1570,6 @@ void StartDefaultTask(void const * argument)
     osDelay(1);
   }
   /* USER CODE END 5 */ 
-}
-
-/* USER CODE BEGIN Header_tcpip_thread */
-/**
-* @brief Function implementing the TCP_IP thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_tcpip_thread */
-void tcpip_thread(void const * argument)
-{
-  /* USER CODE BEGIN tcpip_thread */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END tcpip_thread */
 }
 
  /**
