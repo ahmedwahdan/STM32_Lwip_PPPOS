@@ -181,7 +181,7 @@
  * Provide default values for undefined configuration constants.
  */
 #ifndef AWS_IOT_MQTT_ENABLE_METRICS
-    #define AWS_IOT_MQTT_ENABLE_METRICS             ( 1 )
+    #define AWS_IOT_MQTT_ENABLE_METRICS             ( 0 )
 #endif
 #ifndef IOT_MQTT_ENABLE_SERIALIZER_OVERRIDES
     #define IOT_MQTT_ENABLE_SERIALIZER_OVERRIDES    ( 0 )

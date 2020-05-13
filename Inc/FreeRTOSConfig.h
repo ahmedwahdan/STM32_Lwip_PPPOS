@@ -139,6 +139,14 @@ standard names. */
 
 /* USER CODE BEGIN Defines */   	      
 /* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */
+#define configUSE_TIMERS                    1
+#define configTIMER_TASK_PRIORITY           5
+#define configTIMER_QUEUE_LENGTH            10
+#define configTIMER_TASK_STACK_DEPTH        3584
+
+#define INCLUDE_xTimerPendFunctionCall      1
+#define INCLUDE_eTaskGetState               1
+#define configUSE_QUEUE_SETS                1
 /* USER CODE END Defines */ 
 
 #endif /* FREERTOS_CONFIG_H */
