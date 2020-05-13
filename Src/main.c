@@ -27,7 +27,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "lcd_log.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -123,7 +123,28 @@ void StartDefaultTask(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+static void BSP_Config(void)
+{
+  /* Initialize the LCD */
+  BSP_LCD_Init();
 
+  /* Initialize the LCD Layers */
+  BSP_LCD_LayerDefaultInit(1, LCD_FB_START_ADDRESS);
+
+  /* Set LCD Foreground Layer  */
+  BSP_LCD_SelectLayer(1);
+
+  BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
+
+  /* Initialize LCD Log module */
+  LCD_LOG_Init();
+
+  /* Show Header and Footer texts */
+  LCD_LOG_SetHeader((uint8_t *)"Webserver Application Netconn API");
+  LCD_LOG_SetFooter((uint8_t *)"STM32746G-DISCO board");
+
+  LCD_UsrLog ((char *)"  State: Ethernet Initialization ...\n");
+}
 /* USER CODE END 0 */
 
 /**
@@ -153,30 +174,30 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_ADC3_Init();
-  MX_CRC_Init();
-  MX_DCMI_Init();
-  MX_DMA2D_Init();
-  MX_FMC_Init();
-  MX_I2C1_Init();
-  MX_I2C3_Init();
-  MX_LTDC_Init();
-  MX_QUADSPI_Init();
-  MX_RTC_Init();
-  MX_SAI2_Init();
-  MX_SDMMC1_SD_Init();
-  MX_SPDIFRX_Init();
-  MX_SPI2_Init();
-  MX_TIM1_Init();
-  MX_TIM2_Init();
-  MX_TIM3_Init();
-  MX_TIM5_Init();
-  MX_TIM8_Init();
-  MX_TIM12_Init();
-  MX_USART1_UART_Init();
-  MX_USART6_UART_Init();
-  MX_FATFS_Init();
+//  MX_GPIO_Init();
+//  MX_ADC3_Init();
+//  MX_CRC_Init();
+//  MX_DCMI_Init();
+//  MX_DMA2D_Init();
+//  MX_FMC_Init();
+//  MX_I2C1_Init();
+//  MX_I2C3_Init();
+//  MX_LTDC_Init();
+//  MX_QUADSPI_Init();
+//  MX_RTC_Init();
+//  MX_SAI2_Init();
+//  MX_SDMMC1_SD_Init();
+//  MX_SPDIFRX_Init();
+//  MX_SPI2_Init();
+//  MX_TIM1_Init();
+//  MX_TIM2_Init();
+//  MX_TIM3_Init();
+//  MX_TIM5_Init();
+//  MX_TIM8_Init();
+//  MX_TIM12_Init();
+//  MX_USART1_UART_Init();
+//  MX_USART6_UART_Init();
+//  MX_FATFS_Init();
   /* Up to user define the empty MX_MBEDTLS_Init() function located in mbedtls.c file */
   /* USER CODE BEGIN 2 */
 
@@ -1562,6 +1583,8 @@ void StartDefaultTask(void const * argument)
   /* init code for USB_HOST */
   MX_USB_HOST_Init();
   /* USER CODE BEGIN 5 */
+  BSP_Config();
+  printf("LwIP Init... \n");
   MX_LWIP_Init();
   http_server_netconn_init();
   /* Infinite loop */

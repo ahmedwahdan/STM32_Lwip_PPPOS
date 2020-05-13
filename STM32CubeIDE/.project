@@ -37,6 +37,11 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/STM_LwIP_PPPOS.ioc</locationURI>
 		</link>
 		<link>
+			<name>Utilities/lcd_log.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/STM32CubeF7/Utilities/Log/lcd_log.c</locationURI>
+		</link>
+		<link>
 			<name>Application/User/bsp_driver_sd.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Src/bsp_driver_sd.c</locationURI>
@@ -115,6 +120,11 @@
 			<name>Application/User/usbh_platform.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Src/usbh_platform.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/STM32746G-Discovery</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
 			<name>Drivers/CMSIS/system_stm32f7xx.c</name>
@@ -1220,6 +1230,36 @@
 			<name>Middlewares/mbedTLS/xtea.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Middlewares/Third_Party/mbedTLS/library/xtea.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.h</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.h</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
