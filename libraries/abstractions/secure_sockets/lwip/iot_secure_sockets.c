@@ -39,7 +39,7 @@
 #include "lwip/sockets.h"
 #include "lwip/netdb.h"
 
-#include "iot_wifi.h"
+//#include "iot_wifi.h"
 
 #include "iot_tls.h"
 
@@ -795,7 +795,7 @@ uint32_t SOCKETS_GetHostByName( const char * pcHostName )
 
     if( strlen( pcHostName ) <= ( size_t ) securesocketsMAX_DNS_NAME_LENGTH )
     {
-        WIFI_GetHostIP( ( char * ) pcHostName, ( uint8_t * ) &addr );
+        //WIFI_GetHostIP( ( char * ) pcHostName, ( uint8_t * ) &addr );
     }
     else
     {

@@ -67,7 +67,6 @@
 									<listOptionValue builtIn="false" value="../../Inc"/>
 									<listOptionValue builtIn="false" value="../../Middlewares/Third_Party/LwIP/src/include/netif"/>
 									<listOptionValue builtIn="false" value="../../Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa"/>
-									<listOptionValue builtIn="false" value="../../Middlewares/Third_Party/mbedTLS/include/mbedtls"/>
 									<listOptionValue builtIn="false" value="&quot;../..\Utilities\Log&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../..\Drivers\BSP\STM32746G-Discovery&quot;"/>
 									<listOptionValue builtIn="false" value="../../Drivers/BSP"/>
@@ -79,6 +78,14 @@
 									<listOptionValue builtIn="false" value="&quot;../..\libraries\c_sdk\standard\common\include\private&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../..\freertos_kernel\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../..\libraries\abstractions\secure_sockets\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../..\libraries\c_sdk\standard\tls\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../..\freertos_plus\standard\crypto\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../..\freertos_plus\standard\pkcs11\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\Wahdan\Repos\STM_LwIP_PPPOS\freertos_plus\standard\utils\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../..\libraries\abstractions\pkcs11\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../..\libraries\3rdparty\pkcs11&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\Wahdan\Repos\STM_LwIP_PPPOS\libraries\abstractions\pkcs11\mbedtls&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../..\libraries\3rdparty\mbedtls\include&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1057980668" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>

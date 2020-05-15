@@ -72,7 +72,7 @@ typedef int ( * pfnMbedTlsSign )( void * ctx,
                                                    size_t ),
                                   void * p_rng );
 
-#define PKCS11_PRINT( X )            vLoggingPrintf X
+#define PKCS11_PRINT( X )           // vLoggingPrintf X
 #define PKCS11_WARNING_PRINT( X )    /* vLoggingPrintf X */
 
 /* Indicates that no PKCS #11 operation is underway for given session. */

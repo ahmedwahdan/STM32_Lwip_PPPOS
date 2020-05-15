@@ -744,14 +744,42 @@ static int _publishAllMessages( IotMqttConnection_t mqttConnection,
 
     return status;
 }
-
+extern const IotNetworkInterface_t IotNetworkAfr;
+IotNetworkCredentials_t tcpIPCredentials = { 0 };
+static IotNetworkServerInfo_t tcpIPConnectionParams = { 0 };
 int Demo_Run()
 {
 	bool awsIotMqttMode;
-	                 const char * pIdentifier;
-	                 void * pNetworkServerInfo;
-	                 void * pNetworkCredentialInfo;
-	                 const IotNetworkInterface_t * pNetworkInterface;
+//	                 const char * pIdentifier;
+//	                 void * pNetworkServerInfo;
+//	                 void * pNetworkCredentialInfo;
+//	                 const IotNetworkInterface_t * pNetworkInterface;
+
+	const char * pIdentifier = "Clien_Id";
+
+
+	tcpIPConnectionParams.pHostName = clientcredentialMQTT_BROKER_ENDPOINT;
+    tcpIPConnectionParams.port = clientcredentialMQTT_BROKER_PORT;
+
+//    if( tcpIPConnectionParams.port == 443 )
+//    {
+//        tcpIPCredentials.pAlpnProtos = socketsAWS_IOT_ALPN_MQTT;
+//    }
+//    else
+//    {
+//        tcpIPCredentials.pAlpnProtos = NULL;
+//    }
+
+    tcpIPCredentials.maxFragmentLength = 0;
+    tcpIPCredentials.disableSni = false;
+    tcpIPCredentials.pRootCa = NULL;
+    tcpIPCredentials.rootCaSize = 0;
+    tcpIPCredentials.pClientCert = keyCLIENT_CERTIFICATE_PEM;
+    tcpIPCredentials.clientCertSize = sizeof( keyCLIENT_CERTIFICATE_PEM );
+    tcpIPCredentials.pPrivateKey = keyCLIENT_PRIVATE_KEY_PEM;
+    tcpIPCredentials.privateKeySize = sizeof( keyCLIENT_PRIVATE_KEY_PEM );
+
+
 
 	/* Return value of this function and the exit status of this program. */
 	    int status = EXIT_SUCCESS;
@@ -786,9 +814,9 @@ int Demo_Run()
 	        /* Establish a new MQTT connection. */
 	        status = _establishMqttConnection( awsIotMqttMode,
 	                                           pIdentifier,
-	                                           pNetworkServerInfo,
-	                                           pNetworkCredentialInfo,
-	                                           pNetworkInterface,
+											   (void*)&tcpIPConnectionParams,
+											   (void*)&tcpIPCredentials,
+											   (void*)&IotNetworkAfr,
 	                                           &mqttConnection );
 	    }
 
