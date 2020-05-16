@@ -52,7 +52,7 @@
 /**
  * @brief Enable metrics of secure socket.
  */
-#define AWS_IOT_SECURE_SOCKETS_METRICS_ENABLED    ( 1 )
+#define AWS_IOT_SECURE_SOCKETS_METRICS_ENABLED    ( 0 )
 
 /**
  * @brief Stack depth for the task that runs the receive callback function
