@@ -812,10 +812,10 @@ int Demo_Run()
 	        librariesInitialized = true;
 
 	        /* Establish a new MQTT connection. */
-	        status = _establishMqttConnection( awsIotMqttMode,
+	        status = _establishMqttConnection( false,
 	                                           pIdentifier,
 											   (void*)&tcpIPConnectionParams,
-											   (void*)&tcpIPCredentials,
+											   NULL,//(void*)&tcpIPCredentials,
 											   (void*)&IotNetworkAfr,
 	                                           &mqttConnection );
 	    }

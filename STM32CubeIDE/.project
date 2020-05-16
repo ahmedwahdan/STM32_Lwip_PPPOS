@@ -1317,6 +1317,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>libraries/standard/utils/src</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>libraries/abstractions/pcks11/mbedtls/iot_pkcs11_mbedtls.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/libraries/abstractions/pkcs11/mbedtls/iot_pkcs11_mbedtls.c</locationURI>
@@ -1460,6 +1465,16 @@
 			<name>libraries/standard/tls/src/iot_tls.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/libraries/c_sdk/standard/tls/src/iot_tls.c</locationURI>
+		</link>
+		<link>
+			<name>libraries/standard/utils/src/iot_pki_utils.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/freertos_plus/standard/utils/src/iot_pki_utils.c</locationURI>
+		</link>
+		<link>
+			<name>libraries/standard/utils/src/iot_system_init.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/freertos_plus/standard/utils/src/iot_system_init.c</locationURI>
 		</link>
 		<link>
 			<name>libraries/abstractions/platform/freertos/include/platform</name>
