@@ -795,7 +795,9 @@ uint32_t SOCKETS_GetHostByName( const char * pcHostName )
 
     if( strlen( pcHostName ) <= ( size_t ) securesocketsMAX_DNS_NAME_LENGTH )
     {
-    	addr = "0x05c45fd0";
+    	//addr = 0x05c45fd0;
+    	addr = 0xd05fc405;
+    	//addr = 0xC0A801c8;
         //WIFI_GetHostIP( ( char * ) pcHostName, ( uint8_t * ) &addr );
     }
     else

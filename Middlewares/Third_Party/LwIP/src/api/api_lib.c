@@ -378,7 +378,8 @@ netconn_connect(struct netconn *conn, const ip_addr_t *addr, u16_t port)
 {
   API_MSG_VAR_DECLARE(msg);
   err_t err;
-
+  traceString chn = xTraceRegisterString("MyChannel");
+  vTracePrint(chn, "netconn_connect");
   LWIP_ERROR("netconn_connect: invalid conn", (conn != NULL), return ERR_ARG;);
 
 #if LWIP_IPV4
@@ -395,6 +396,7 @@ netconn_connect(struct netconn *conn, const ip_addr_t *addr, u16_t port)
   err = netconn_apimsg(lwip_netconn_do_connect, &API_MSG_VAR_REF(msg));
   API_MSG_VAR_FREE(msg);
 
+  vTracePrint(chn, "netconn_connect : return");
   return err;
 }
 

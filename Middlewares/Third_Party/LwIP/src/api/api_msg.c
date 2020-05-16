@@ -1934,7 +1934,6 @@ void
 lwip_netconn_do_close(void *m)
 {
   struct api_msg *msg = (struct api_msg *)m;
-
 #if LWIP_TCP
   enum netconn_state state = msg->conn->state;
   /* First check if this is a TCP netconn and if it is in a correct state

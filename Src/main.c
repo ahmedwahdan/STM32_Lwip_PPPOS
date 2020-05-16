@@ -102,7 +102,7 @@
  *
  * An MQTT ping request will be sent periodically at this interval.
  */
-#define KEEP_ALIVE_SECONDS                       ( 60 )
+#define KEEP_ALIVE_SECONDS                       ( 0 )
 
 /**
  * @brief The timeout for MQTT operations in this demo.
@@ -948,7 +948,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  vTraceEnable(TRC_INIT);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -2366,6 +2366,7 @@ void StartDefaultTask(void const * argument)
   MX_LWIP_Init();
   http_server_netconn_init();
   /* Infinite loop */
+  IotSdk_Init();
   for(;;)
   {
 	  Demo_Run();
